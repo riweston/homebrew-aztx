@@ -5,29 +5,29 @@
 class Aztx < Formula
   desc "This tool is a helper for azure-cli that leverages fzf for a nice interface to switch between subscription contexts."
   homepage "https://github.com/riweston/aztx"
-  version "0.0.2"
+  version "0.0.3"
   license "Apache"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/0.0.2/aztx_0.0.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy.
-      sha256 "f4abd54b87af92cfcb3e6a40ab75c0d87946c1eac64b1f865c70a77684f2df77"
+      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_darwin_amd64.tar.gz"
+      sha256 "69b782c39caffa022bf2f00e74e994e26bbecfc16139383f9c8d429fa33e9cb3"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/riweston/aztx/releases/download/0.0.2/aztx_0.0.2_darwin_arm64.tar.gz", :using => CurlDownloadStrategy.
-      sha256 "1f3edad636c5d27a8e6ab26846d5ad0c5473795599318414a64ea1103e199ec2"
+      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_darwin_arm64.tar.gz"
+      sha256 "fac96101cfd0cf040d4b6198a56b32f307d1b7ee14104b889a42688216bd2996"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/0.0.2/aztx_0.0.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy.
-      sha256 "c96335b156aee2e64bf2c4109825c3ac2b339f32b91e7ce0b6c23a6bcfd4f691"
+      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_linux_amd64.tar.gz"
+      sha256 "1fcd0400e51a1dc1b8edf55df99626c74ec9081b53594ebb490155fc6339f04a"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/riweston/aztx/releases/download/0.0.2/aztx_0.0.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy.
-      sha256 "58c1b0f091be0fb9d7d3e40a46350a6a053de1206ad5da08e7cf1819b097aad1"
+      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_linux_arm64.tar.gz"
+      sha256 "5cdbb252aafff24bf60f22eea2ab98cfc77ba9d86195fbf2028bd4c2ea1ea2e0"
     end
   end
 
