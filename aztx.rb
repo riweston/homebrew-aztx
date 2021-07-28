@@ -5,29 +5,29 @@
 class Aztx < Formula
   desc "This tool is a helper for azure-cli that leverages fzf for a nice interface to switch between subscription contexts."
   homepage "https://github.com/riweston/aztx"
-  version "0.0.3"
+  version "0.2.0"
   license "Apache"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_darwin_amd64.tar.gz"
-      sha256 "69b782c39caffa022bf2f00e74e994e26bbecfc16139383f9c8d429fa33e9cb3"
+      url "https://github.com/riweston/aztx/releases/download/0.2.0/aztx_0.2.0_darwin_amd64.tar.gz"
+      sha256 "14cd42e36a44448bae3cfed8240749090c7cb0fcba3f9cd02b7cea45b96e2f9b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_darwin_arm64.tar.gz"
-      sha256 "fac96101cfd0cf040d4b6198a56b32f307d1b7ee14104b889a42688216bd2996"
+      url "https://github.com/riweston/aztx/releases/download/0.2.0/aztx_0.2.0_darwin_arm64.tar.gz"
+      sha256 "324f4fabc73362f013615a46e92ce62da27e63d8f24eb1e49a2345a9c6d9a047"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_linux_amd64.tar.gz"
-      sha256 "1fcd0400e51a1dc1b8edf55df99626c74ec9081b53594ebb490155fc6339f04a"
+      url "https://github.com/riweston/aztx/releases/download/0.2.0/aztx_0.2.0_linux_amd64.tar.gz"
+      sha256 "18ad4d95a619d2b45301b0e0b9c92f8b2bdf29efb3d2e15eddab51423fd2da0e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/riweston/aztx/releases/download/0.0.3/aztx_0.0.3_linux_arm64.tar.gz"
-      sha256 "5cdbb252aafff24bf60f22eea2ab98cfc77ba9d86195fbf2028bd4c2ea1ea2e0"
+      url "https://github.com/riweston/aztx/releases/download/0.2.0/aztx_0.2.0_linux_arm64.tar.gz"
+      sha256 "956608e854581f21f9d1395d6cdd2a4861b71e2b3c7b217d8cabd0c5b929fe39"
     end
   end
 
