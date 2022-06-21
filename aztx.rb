@@ -5,21 +5,21 @@
 class Aztx < Formula
   desc "This tool is a helper for azure-cli that leverages fzf for a nice interface to switch between subscription contexts."
   homepage "https://github.com/riweston/aztx"
-  version "0.7.0"
+  version "0.8.0"
   license "Apache"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/0.7.0/aztx_0.7.0_darwin_amd64.tar.gz"
-      sha256 "1c1300b7ed900a94835af7fdcda6ca3076116cb7fecb38c8a9ebc4d71ff4e49b"
+    if Hardware::CPU.arm?
+      url "https://github.com/riweston/aztx/releases/download/0.8.0/aztx_0.8.0_darwin_arm64.tar.gz"
+      sha256 "26d30ca779394c923d7e774a49dbdc9a176ec7a6781da9c50fdc42d08157852e"
 
       def install
         bin.install "aztx"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/riweston/aztx/releases/download/0.7.0/aztx_0.7.0_darwin_arm64.tar.gz"
-      sha256 "d745f30e72cf4982a7ddcd31e3c64e444f6cb6b89e8ba1d04315b3b2d2eb672f"
+    if Hardware::CPU.intel?
+      url "https://github.com/riweston/aztx/releases/download/0.8.0/aztx_0.8.0_darwin_amd64.tar.gz"
+      sha256 "eab8f6134ccd2d1f632d8a14d495eb72d9ede09018da72c31b0ed9e7ad3c352e"
 
       def install
         bin.install "aztx"
@@ -28,17 +28,17 @@ class Aztx < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/0.7.0/aztx_0.7.0_linux_amd64.tar.gz"
-      sha256 "341775830092c5d46b4cf15dc492db48d2444c40a8cd89cc13c1bd31074e8c74"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/riweston/aztx/releases/download/0.8.0/aztx_0.8.0_linux_arm64.tar.gz"
+      sha256 "bf886b3b8155901b0173afed54e8f252ffc3b44cd49280ee988766d706b49803"
 
       def install
         bin.install "aztx"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/riweston/aztx/releases/download/0.7.0/aztx_0.7.0_linux_arm64.tar.gz"
-      sha256 "f06532c1e6013a72e246943c0b945b445ba083cd3141483b97559db005241184"
+    if Hardware::CPU.intel?
+      url "https://github.com/riweston/aztx/releases/download/0.8.0/aztx_0.8.0_linux_amd64.tar.gz"
+      sha256 "09caac49925fd79e0611dde4c4b0d8c0fca56e6e0e7e12ebe8dbad673755c6be"
 
       def install
         bin.install "aztx"
