@@ -5,24 +5,24 @@
 class Aztx < Formula
   desc "This tool is a helper for azure-cli that leverages fzf for a nice interface to switch between subscription contexts."
   homepage "https://github.com/riweston/aztx"
-  version "1.0.1"
-  license "Apache"
+  version "1.0.2"
+  license "MIT"
 
   depends_on "azure-cli"
   depends_on "fzf"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/1.0.1/aztx_1.0.1_darwin_amd64.tar.gz"
-      sha256 "b8ebba3b1d673028c435012d717b6e6b4f04ad655f1c9249aea74b6e4fe860e6"
+    if Hardware::CPU.arm?
+      url "https://github.com/riweston/aztx/releases/download/1.0.2/aztx_1.0.2_darwin_arm64.zip"
+      sha256 "a6c668124269e7b596c96870a735a0aa14be25a302e8dd6dee6d68c919f43b9b"
 
       def install
         bin.install "aztx"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/riweston/aztx/releases/download/1.0.1/aztx_1.0.1_darwin_arm64.tar.gz"
-      sha256 "4b7927e925bb9103433febbb2b8379c4a0f91d090d7a082814f8b9928541b814"
+    if Hardware::CPU.intel?
+      url "https://github.com/riweston/aztx/releases/download/1.0.2/aztx_1.0.2_darwin_amd64.zip"
+      sha256 "63c1d2b21df262fdde3a6fd7202ad1bca96975a4614ccf5669bf0167b233b2af"
 
       def install
         bin.install "aztx"
@@ -32,16 +32,16 @@ class Aztx < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/riweston/aztx/releases/download/1.0.1/aztx_1.0.1_linux_arm64.tar.gz"
-      sha256 "b161e75bc5ebddbbf383bb337ff40d4c07497ea16e21eb3392a17fec1682785d"
+      url "https://github.com/riweston/aztx/releases/download/1.0.2/aztx_1.0.2_linux_arm64.zip"
+      sha256 "0a4b0733ec2a7422e08ec7cf87bc225647075c1adee2dded8e8edba168d40582"
 
       def install
         bin.install "aztx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/riweston/aztx/releases/download/1.0.1/aztx_1.0.1_linux_amd64.tar.gz"
-      sha256 "3c6ca9da55f91355bfd48105294f42645157ed407ec4754c2578ef415a2982b1"
+      url "https://github.com/riweston/aztx/releases/download/1.0.2/aztx_1.0.2_linux_amd64.zip"
+      sha256 "43184bc6efa6f53e656cf1d1356f64cb5acead02b264bf2e23abbcc3fea089b9"
 
       def install
         bin.install "aztx"
